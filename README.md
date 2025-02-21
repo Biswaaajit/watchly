@@ -26,6 +26,11 @@ The Watchly platform is a MERN-based video streaming application that allows use
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Token)
 - **Middleware**: Express Router
+
+## 🌍 Live Demo
+
+You can check out the live version of **Watchly** here:
+[Watchly Live](https://watchly-rho.vercel.app/)
 ## Deployment
 To downlode all node packages
 
