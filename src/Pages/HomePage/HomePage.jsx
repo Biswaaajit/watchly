@@ -40,7 +40,7 @@ function HomePage() {
         <HomeFilterBtn filter={filter} name="movies" setFilter={setFilter} />
         <HomeFilterBtn filter={filter} name="gaming" setFilter={setFilter} />
       </div>
-      <div className="grow  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  place-items-center overflow-y-auto py-10 pb-20 gap-y-8 gap-x-4 transition-all">
+      <div className="grow  grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  place-items-center overflow-y-auto py-10 px-1 pb-20 gap-y-8 gap-x-4 transition-all">
         {data.map((data) => (
           <HomeVideo key={data._id} data={data} />
         ))}

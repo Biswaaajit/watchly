@@ -6,7 +6,7 @@ function HomeVideoCard({
   videoId,
   videoUrl,
   thumbnailUrl,
-  width = "w-[22rem] xs:w-[25rem]",
+  width = "w-[19rem] xs:w-[25rem]",
 }) {
   const [ishover, setHover] = useState(false);
   return (
