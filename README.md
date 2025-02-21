@@ -41,6 +41,6 @@ To downlode all node packages
 To deploy this project run
 
 ```bash
-  npm start
+  npm run dev
 ```
 
