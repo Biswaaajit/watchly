@@ -24,7 +24,7 @@ function ChannelVideoCard({ data, fetchVideo }) {
       <div className="px-1 space-y-1 relative">
         <div className="flex items-center justify-between">
           <p className="text-xl font-semibold">{title}</p>
-          {show && <ChannelDeleteBtn fetchVideo={fetchVideo} />}
+          {show && <ChannelDeleteBtn videoId={_id} fetchVideo={fetchVideo} />}
           <button
             onClick={() => setShow((prev) => !prev)}
             className="hover:bg-slate-200/50 p-1 rounded-full"
