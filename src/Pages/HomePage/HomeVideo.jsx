@@ -36,7 +36,7 @@ function HomeVideo({ data }) {
             channelBanner={channelBanner}
           />
         ) : (
-          <div className="bg-orange-500 text-white capitalize w-10 h-10 flex justify-center items-center rounded-full text-3xl">
+          <div className="bg-orange-500 text-white capitalize w-10 h-10 p-1 flex justify-center items-center rounded-full text-2xl xs:text-3xl">
             <p>{channelName[0]}</p>
           </div>
         )}
