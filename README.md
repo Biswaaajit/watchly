@@ -31,6 +31,23 @@ The Watchly platform is a MERN-based video streaming application that allows use
 
 You can check out the live version of **Watchly** here:
 [Watchly Live](https://watchly-rho.vercel.app/)
+
+## 🔑 Demo User Information
+
+### 🎥 Demo Account 1
+- **Email:** `biswajeet@gmail.com`
+- **Password:** `123`
+- **Channel Name:** `Biswa Blogs`
+
+### 🎥 Demo Account 2
+- **Email:** `Abhi@gmail.com`
+- **Password:** `456`
+- **Channel Name:** `TrailerReview`
+
+### 🎥 Demo Account 3
+- **Email:** `gourab@gmail.com`
+- **Password:** `789`
+- **Channel Name:** `Gaming`
 ## Deployment
 To downlode all node packages
 
