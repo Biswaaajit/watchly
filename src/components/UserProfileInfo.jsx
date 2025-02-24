@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import UserProfileIcon from "./UserProfileIcon";
 import { UserContext } from "../UserContext";
 import { LuUsers } from "react-icons/lu";
@@ -8,9 +8,12 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function UserProfileInfo({ setShowProfile }) {
   const { loginUser, loginEmail, logOut } = useContext(UserContext);
+  const box = useRef(null);
   const navigate = useNavigate();
 
   function handleChannel() {
@@ -18,8 +21,21 @@ function UserProfileInfo({ setShowProfile }) {
     navigate("/channel");
   }
 
+  //Animation profile box
+  useGSAP(() => {
+    gsap.from(box.current, {
+      scale: 0,
+      opacity: 0,
+      duration: 0.4,
+      ease: "power2.inOut",
+    });
+  }, []);
+
   return (
-    <div className="bg-white shadow-[0_2px_15px_1px] shadow-zinc-500/50 pt-2 pb-3  absolute top-4 right-14 sm:right-16 lg:right-[70px] w-fit xs:w-[16rem] h-fit z-30  rounded-xl divide-y-2 divide-slate-300/40">
+    <div
+      ref={box}
+      className="bg-white shadow-[0_2px_15px_1px] shadow-zinc-500/50 pt-2 pb-3  absolute top-4 right-14 sm:right-16 lg:right-[70px] w-fit xs:w-[16rem] h-fit z-30  rounded-xl divide-y-2 divide-slate-300/40"
+    >
       <div className="flex items-start gap-3 py-4 px-5">
         <UserProfileIcon width="w-[3rem]" height="h-[3rem]" />
         <div className="text-sm">

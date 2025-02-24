@@ -9,11 +9,26 @@ import {
   IoGameControllerOutline,
   IoSettingsOutline,
 } from "react-icons/io5";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import gsap from "gsap";
 
 function MobileNav({ setShowNav }) {
+  const navRef = useRef(null);
+  //Animation of navigation bar
+  useGSAP(() => {
+    gsap.from(navRef.current, {
+      x: -200,
+      duration: 0.35,
+    });
+  }, []);
+
   return (
     <div className="w-full h-screen lg:hidden bg-slate-600/30 absolute top-0 z-50">
-      <div className="w-[60vw] xs:w-[20rem] sm:w-[20rem] bg-white  h-full">
+      <div
+        ref={navRef}
+        className="w-[60vw] xs:w-[20rem] sm:w-[20rem] bg-white  h-full"
+      >
         <div className="flex items-center px-4 py-4 gap-4 shadow-sm">
           {/* Mobile Bar */}
 

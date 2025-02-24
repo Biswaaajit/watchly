@@ -11,7 +11,7 @@ import PropTypes from "prop-types";
 
 function Navigation({ showFull }) {
   return (
-    <div className="h-full w-fit hidden lg:block px-2.5 space-y-6 py-6 ">
+    <div className=" w-fit h-full  hidden lg:block px-2.5 space-y-6 py-6 ">
       <SideNavigationLink
         name="Home"
         link="/"

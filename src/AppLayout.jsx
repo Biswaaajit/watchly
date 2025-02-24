@@ -6,11 +6,13 @@ import { useState } from "react";
 function AppLayout() {
   const [showFull, setShowFull] = useState(true);
   return (
-    <div className="w-full h-fit  flex flex-col overflow-hidden">
+    <div className="w-full max-h-screen  flex flex-col overflow-hidden">
       <Header setShowFull={setShowFull} />
-      <div className="grow w-full h-full flex divide-x-2 divide-slate-200/40">
+      <div className="grow w-full h-fit flex divide-x-2 overflow-auto divide-slate-200/40">
         <Navigation showFull={showFull} />
-        <Outlet />
+        <div className="grow overflow-y-auto">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
